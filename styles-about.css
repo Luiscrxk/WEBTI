@@ -1,0 +1,192 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html, body{
+    height:100%;
+}
+/* TIPOGRAFÍA GLOBAL */
+body{
+    font-family:'Montserrat', sans-serif;
+    background: radial-gradient(circle at top, #0a0a0a 0%, #000 80%);
+    color:#e6e6e6;
+    overflow-x:hidden;
+    display:flex;
+    flex-direction:column;
+}
+
+/* TITULOS */
+h1, h2, h3, .game-title{
+    font-family:'Creepster', cursive;
+    letter-spacing:2px;
+}
+
+/* TEXTOS */
+p, span, li, a, button{
+    font-family:'Montserrat', sans-serif;
+}
+
+/* HEADER */
+.game-header{
+    text-align:center;
+    padding:80px 20px 50px;
+    background:linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.7));
+    border-bottom:1px solid #111;
+}
+
+.game-title{
+    font-size:3.5rem;
+    letter-spacing:10px;
+    margin-bottom:20px;
+    color:#f2f2f2;
+    text-shadow:
+        0 0 10px rgba(255,0,0,0.4),
+        0 0 30px rgba(0,0,0,1);
+}
+
+/* BOTÓN */
+.game-nav .game-btn{
+    text-decoration:none;
+    color:#fff;
+    border:1px solid #333;
+    padding:12px 35px;
+    letter-spacing:3px;
+    transition:0.4s ease;
+}
+
+.game-nav .game-btn:hover{
+    background:#ff0000;
+    border-color:#ff0000;
+}
+
+/* GRID */
+.team-square{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+    padding:80px 10%;
+}
+
+/* CARD */
+.profile-card{
+    background:rgba(20,20,20,0.8);
+    border:1px solid #1f1f1f;
+    border-left:3px solid #ff0000;
+    backdrop-filter: blur(6px);
+    border-radius:10px;
+    overflow:hidden;
+    transition:0.4s ease;
+    position:relative;
+}
+
+.profile-card:hover{
+    transform:translateY(-10px);
+    border-color:#ff0000;
+    box-shadow:0 0 25px rgba(255,0,0,0.3);
+}
+
+/* IMAGEN */
+.profile-image{
+    text-align:center;
+    padding:30px 20px 10px;
+}
+
+.profile-image img{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #ff0000;
+    filter:grayscale(40%);
+    transition:0.4s ease;
+}
+
+.profile-card:hover .profile-image img{
+    transform:scale(1.08);
+    filter:grayscale(0%);
+}
+
+/* INFO */
+.profile-info{
+    padding:20px;
+    text-align:center;
+}
+
+.profile-info h3{
+    font-size:400%;
+    margin-bottom:8px;
+}
+
+.profile-info p{
+    opacity:0.7;
+    margin-bottom:20px;
+    font-size:100%;
+}
+
+/* SKILLS */
+.skill{
+    margin-bottom:15px;
+    text-align:left;
+}
+
+.skill span{
+    font-size:75%;
+    letter-spacing:1px;
+    opacity:0.8;
+}
+
+.bar{
+    margin-top:6px;
+    background:#111;
+    height:5px;
+    border-radius:10px;
+    overflow:hidden;
+    font-size:600%;
+}
+
+.fill{
+    height:100%;
+    background:#ff0000;
+    border-radius:10px;
+    width:0;
+    animation:loadBar 2s forwards;
+}
+
+/* PORCENTAJES */
+.s75{ width:75%; }
+.s80{ width:80%; }
+.s85{ width:85%; }
+.s90{ width:90%; }
+
+/* ANIMACIÓN */
+@keyframes loadBar{
+    from{ width:0; }
+}
+
+/* SOCIAL */
+.social-links{
+    margin-top:20px;
+}
+
+.social-links a{
+    margin:0 10px;
+    color:#555;
+    font-size: 200%;
+    transition:0.3s ease;
+}
+
+.social-links a:hover{
+    color:#ff0000;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:40px;
+    background:#000;
+    font-size:0.8rem;
+    opacity:0.6;
+     margin-top:auto; /* 🔥 empuja el footer abajo */
+}

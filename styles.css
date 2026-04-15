@@ -1,0 +1,380 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background:#000;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+.navbar{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    padding:30px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+    background:rgba(0,0,0,0.35);
+    backdrop-filter: blur(6px);
+}
+
+.logo{
+    font-family:'Creepster', cursive;
+    font-size: 300%;
+    letter-spacing:4px;
+    color:#fff;
+}
+
+
+.nav-links a{
+    margin-left:35px;
+    text-decoration:none;
+    color:#fff;
+    font-size:0.8rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#ff0000;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    font-family:'Creepster', cursive;
+    font: size 2.5rem;
+    letter-spacing:4px;
+    color:#ff0000;
+    background:url("fondo.avif") center center / cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+}
+
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+}
+
+/* HERO CONTENT */
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    padding:0 20px;
+    font-family:'Creepster', cursive;
+}
+
+.hero-content h1{
+    font-size:600%;
+    letter-spacing:12px;
+    font-weight:300;
+    text-transform:uppercase;
+    margin-bottom:25px;
+    
+}
+
+
+.hero-content p{
+    font-size:200%;
+    letter-spacing:3px;
+    margin-bottom:40px;
+    opacity:0.8;
+}
+
+
+/* BOTÓN */
+.main-btn{
+    padding:14px 40px;
+    border:1px solid #fff;
+    background:transparent;
+    color:#fff;
+    font-size:0.8rem;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    cursor:pointer;
+    transition:0.4s ease;
+}
+
+.main-btn:hover{
+    background:#ff0000;
+    border-color:#ff0000;
+}
+
+/* SECCIONES */
+section{
+    padding:100px 10%;
+    background:#000000;
+    
+}
+
+section:nth-child(even){
+     background:#000000;
+}
+
+
+section h2{
+    text-align:center;
+    margin-bottom:60px;
+    font-size: 500%;
+    letter-spacing:5px;
+    font-weight:300;
+    font-family:'Creepster', cursive;
+    color: #ffffff;
+}
+
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+
+.card{
+    background:#1c1c1c;
+    padding:30px;
+    border:1px solid #2a2a2a;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    text-align:center;
+    min-height:250px;
+    position:relative;
+
+    /* IMAGEN DE FONDO */
+    background-image:url("Blood-Drip-Stain-PNG-Photo.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+
+    /* ANIMACIÓN */
+    opacity:0;
+    transform:translateY(60px);
+    transition:all 0.8s ease;
+}
+.card p{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:auto;
+    font: 200px;
+    font-size: 150%;
+    text-align: center;
+}
+
+
+.card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.card:hover{
+    border-color:#ff0000; /* 🔥 borde rojo completo */
+    box-shadow:0 0 25px rgb(255, 0, 0);
+    transform:translateY(-10px);
+}
+
+
+.card h3{
+    margin-bottom:15px;
+    font-weight:400;
+    font-family:'Creepster', cursive;
+    text-align:center;
+    font-size: 300%;
+
+}
+
+
+.card{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between; /* 🔥 separa arriba y abajo */
+    align-items:center;
+    text-align:center;
+    min-height:250px;
+    position: relative;
+    z-index: 2;
+    opacity:0;
+    transform:translateY(60px);
+    transition:all 0.8s ease;
+}
+.card ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;   /* 🔥 centra vertical */
+    align-items:center;       /* 🔥 centra horizontal */
+
+    height:100%; /* importante para que tome toda la card */
+    gap:10px;
+}
+
+.card ul li{
+    font-size: 150%;
+    text-align:center; /* centra texto */
+}
+
+
+/* BOTÓN EQUIPO */
+.team-btn-section{
+    text-align:center;
+    padding:80px 0;
+}
+
+/* TEXTAREA (reseñas) */
+#review-input{
+    width:100%;
+    height:80px;
+    margin:15px 0;
+    padding:10px;
+    background:#111;
+    border:1px solid #333;
+    color:#fff;
+    resize:none;
+    font-family:'Montserrat', sans-serif;
+    transition:0.3s ease;
+}
+
+#review-input:focus{
+    outline:none;
+    border-color:#ff0000;
+    box-shadow:0 0 10px rgba(255,0,0,0.3);
+}
+
+/* CONTENEDOR DE RESEÑAS */
+
+.review-item{
+    display:flex;                 /* 🔥 clave */
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+
+    margin-bottom:10px;
+    padding:10px;
+    background:#111;
+    border-left:2px solid #ff0000;
+}
+
+/* TEXTO */
+.review-item p{
+    margin:0;
+    font-size:0.9rem;
+    flex:1; /* ocupa todo el espacio */
+}
+
+/* BOTÓN ELIMINAR */
+.review-item button{
+    background:transparent;
+    border:1px solid #ff0000;
+    color:#fff;
+    cursor:pointer;
+    padding:5px 10px;
+    transition:0.3s;
+    white-space:nowrap; /* evita que se baje */
+}
+
+.review-item button:hover{
+    background:#ff0000;
+}
+
+
+#reviews-container p{
+    font-size:0.85rem;
+    margin-bottom:10px;
+    opacity:0.8;
+    border-left:2px solid #ff0000;
+    padding-left:10px;
+}
+
+/* BOTÓN dentro de card */
+.card .main-btn{
+    margin-top:10px;
+    width:100%;
+}
+
+/* AJUSTE GENERAL PARA QUE TODO SE ALINEE BONITO */
+.card{
+    gap:10px;
+}
+#credibilidad .card{
+    border-color:#000000;
+    box-shadow:0 0 20px rgba(255,0,0,0.1);
+    
+}
+#credibilidad .card:hover{
+    border-color:#ff0000; /* 🔥 borde rojo completo */
+    box-shadow:0 0 25px rgb(255, 0, 0);
+    transform:translateY(-10px);
+}
+/* INPUT DE NOMBRE */
+#username{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+    background:#111;
+    border:1px solid #333;
+    color:#fff;
+    font-family:'Montserrat', sans-serif;
+}
+
+#username:focus{
+    outline:none;
+    border-color:#ff0000;
+    box-shadow:0 0 10px rgba(255,0,0,0.3);
+}
+
+/* RESEÑAS PRO */
+.review-item{
+    margin-bottom:10px;
+    padding:10px;
+    background:#111;
+    border-left:2px solid #ff0000;
+    text-align:left;
+}
+
+.review-item button{
+    margin-top:5px;
+    background:transparent;
+    border:1px solid #ff0000;
+    color:#fff;
+    cursor:pointer;
+    padding:5px 10px;
+    transition:0.3s;
+}
+
+.review-item button:hover{
+    background:#ff0000;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:40px;
+    background:#000;
+    font-size:0.8rem;
+    letter-spacing:2px;
+    opacity:0.6;
+}

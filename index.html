@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>The Last Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">THE LAST NOTES</div>
+    <div class="nav-links">
+        <a href="#historia">Historia</a>
+        <a href="#jugabilidad">Jugabilidad</a>
+        <a href="#modelo">Modelo</a>
+        <a href="about.html">Equipo</a>
+        <a href="#credibilidad">Credibilidad</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>The Last Notes</h1>
+        <p>La oscuridad no es tu enemiga. Lo es aquello que se mueve dentro de ella.</p>
+    
+    </div>
+</header>
+
+<!-- SECCIONES -->
+<section>
+    <h2>¿Qué es The Last Notes?</h2>
+    <div class="cards">
+        <div class="card">
+            <p>The Last Notes es un juego de terror psicológico en primera persona 
+                donde exploras un bosque abandonado marcado por desapariciones misteriosas. 
+                Tu única misión: recolectar las notas dejadas por quienes no lograron escapar.</p>
+        </div>
+        <div class="card">
+            <p>Cada nota revela fragmentos de una verdad inquietante… pero también despierta 
+                algo que no quiere ser encontrado.
+</p>
+        </div>
+    </div>
+</section>
+
+<section id="historia">
+    <h2>La Historia</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>El Regreso</h3>
+            <p>Años después de una tragedia sin explicación, un investigador vuelve al bosque 
+                para descubrir qué ocurrió realmente. Las autoridades cerraron el caso. 
+                La naturaleza lo ocultó. Pero el bosque recuerda.
+</p>
+        </div>
+        <div class="card">
+            <h3>Las Notas</h3>
+            <p>Los escritos encontrados narran paranoia, miedo y una presencia constante. 
+                Cada hoja encontrada aumenta la tensión… y fortalece a la entidad.
+</p>
+        </div>
+        <div class="card">
+            <h3>La Entidad</h3>
+            <p>No tiene nombre. No tiene forma definida. Aprende de tus movimientos. 
+                Se adapta. Se acerca más rápido. Y cuando la escuchas… ya es demasiado tarde.
+</p>
+        </div>
+    </div>
+</section>
+
+<section id="jugabilidad">
+    <h2>Jugabilidad</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Exploración Inmersiva</h3>
+            <p>
+                Un mapa dinámico con zonas ocultas, iluminación variable y sonidos ambientales 
+                diseñados para generar tensión constante.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Dificultad Progresiva</h3>
+            <p>
+                Mientras más notas recolectes, más agresiva se vuelve la entidad. 
+                La visibilidad disminuye, los sonidos engañan y el margen de error desaparece.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Supervivencia Psicológica</h3>
+            <p>
+                No hay armas. No hay combate. Solo estrategia, memoria del entorno 
+                y la capacidad de mantener la calma bajo presión.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="modelo">
+    <h2>Modelo de Negocio</h2>
+    <div class="cards">
+        <div class="card"><h3>Versión Gratuita</h3> 
+            <p>
+                Acceso al mapa principal con anuncios limitados y dificultad estándar.
+            </p>
+</div>
+        <div class="card"><h3>Versión Premium</h3>
+             <p>
+                Sin anuncios, modo Pesadilla exclusivo y acceso anticipado 
+                a futuras expansiones.
+            </p>
+</div>
+        <div class="card"><h3>Expansiones</h3> 
+            <p>
+                Nuevos mapas, entidades adicionales y eventos especiales 
+                para mantener la experiencia fresca.
+            </p>
+</div>
+    </div>
+</section>
+
+<section id="credibilidad">
+    <h2>Credibilidad</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Inspirado en</h3>
+            <ul>
+                <li>Silent Hill</li>
+                <li>Outlast</li>
+                <li>Slender</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Logros</h3>
+            <ul>
+                <li>Proyecto académico</li>
+                <li>Terror psicológico</li>
+                <li>Optimizado WebGL</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section id="reviews-section">
+    <h2>Reseñas</h2>
+
+    <div class="reviews-box">
+
+        <div id="reviews-container"></div>
+
+        <input type="text" id="username" placeholder="Tu nombre">
+        <textarea id="review-input" placeholder="Escribe tu reseña..."></textarea>
+
+        <button onclick="addReview()" class="main-btn">
+            Publicar
+        </button>
+
+    </div>
+</section>
+
+<!-- EQUIPO -->
+<section class="team-btn-section">
+    <a href="about.html">
+        <button class="main-btn">Acerca del Equipo</button>
+    </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 The Last Notes - Proyecto académico
+</footer>
+
+<!-- AUDIO -->
+<audio id="bg-sound" loop>
+    <source src="audio/SOUND.mp3" type="audio/mpeg">
+</audio>
+
+<!-- JS -->
+<script>
+/* SCROLL ANIMATION */
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+}, { threshold:0.2 });
+
+cards.forEach(card => observer.observe(card));
+
+
+
+/* AGREGAR RESEÑA */
+function addReview(){
+    const nameInput = document.getElementById("username");
+    const reviewInput = document.getElementById("review-input");
+
+    const name = nameInput.value.trim();
+    const text = reviewInput.value.trim();
+
+    if(name === "" || text === "") return;
+
+    const review = { name, text };
+
+    let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+    reviews.push(review);
+    localStorage.setItem("reviews", JSON.stringify(reviews));
+
+    renderReviews();
+
+    nameInput.value = "";
+    reviewInput.value = "";
+}
+
+/* MOSTRAR RESEÑAS */
+function renderReviews(){
+    const container = document.getElementById("reviews-container");
+    container.innerHTML = "";
+
+    let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+    reviews.forEach((review, index) => {
+        const div = document.createElement("div");
+        div.classList.add("review-item");
+
+        div.innerHTML = `
+            <p><strong>${review.name}:</strong> ${review.text}</p>
+            <button onclick="deleteReview(${index})">Eliminar</button>
+        `;
+
+        container.appendChild(div);
+    });
+}
+
+/* ELIMINAR */
+function deleteReview(index){
+    let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+    reviews.splice(index, 1);
+
+    localStorage.setItem("reviews", JSON.stringify(reviews));
+
+    renderReviews();
+}
+
+/* CARGAR AL INICIO */
+window.addEventListener("load", renderReviews);
+
+
+
+</script>
+
+
+</body>
+</html>
